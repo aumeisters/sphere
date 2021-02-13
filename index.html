@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D sphere (almost)</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">	
+		<div class='cube'>
+			<div class="side front">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+			<div class="side back">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+			<div class="side right">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+			<div class="side left">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+			<div class="side top">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+			<div class="side bottom">
+				<div class="inner_side_top front_top_left top_left1"></div>
+				<div class="inner_side_top front_top_left top_left2"></div>
+				<div class="inner_side_top front_top"></div>
+				<div class="inner_side_top front_top_right top_right1"></div>
+				<div class="inner_side_top front_top_right top_right2"></div>
+				<div class="inner_side_left front_left"></div>
+				<div class="inner_side_front front_front"></div>
+				<div class="inner_side_right front_right"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left1"></div>
+				<div class="inner_side_bottom front_bottom_left bottom_left2"></div>
+				<div class="inner_side_bottom front_bottom"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right1"></div>
+				<div class="inner_side_bottom front_bottom_right bottom_right2"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal">
+		<p>This is an example of 3D animation using CSS</p>
+		<div class="modal_controls">
+			<p>For sphere rotation use keyboard arrows</p>
+			<img src="keyboard.png">
+			<button>Let's Go!</button>
+		</div>
+		<p><span class="modal_note">Note: </span>This wont't work on old browsers as well as on mobile phones</p>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

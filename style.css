@@ -1,0 +1,213 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #0000009e;
+	font-family: 'Poppins', sans-serif;
+}
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50vw;
+	height: auto;
+	background-color: #00000078;
+	transform: translate(-50%,-50%);
+	border-radius: 20px;
+	box-shadow: 1px 1px 10px #827878;
+	padding: 1%;
+	font-size: 30px;
+	font-family: inherit;
+	color: #d9d0ce;
+	text-align: center;
+}
+.modal p:first-child:not(.modal_controls p:first-child) {
+	font-size: 46px;
+	font-weight: 700;
+}
+.modal_note {
+	color: #b05441;
+}
+.modal_controls {
+	display: block;
+	text-align: center;
+}
+.modal_controls img {
+	width: 30%;
+}
+.modal_controls button {
+	margin: 50px auto;
+	display: block;
+	font-family: inherit;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 20px;
+	background-color: #a9d1d4;
+	font-weight: bold;
+	font-size: 46px;
+	transition: box-shadow 1s;
+}
+.modal_controls button:hover {
+	box-shadow: 1px 1px 20px 6px #c59b9b;
+	transition: box-shadow 1s;
+}
+.wrapper {
+	position: relative;
+	margin: 200px auto;
+	width: 300px;
+	height: 300px;
+	perspective: 500px;
+	display: none;
+}
+.cube {
+	width: inherit;
+	height: inherit;
+	transform-style: preserve-3d;
+}
+.side {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	transform-style: preserve-3d;
+}
+.side div {
+	font-size: 10px;
+	position: absolute;
+	background-color: rgb(113,105,105, .01);
+	animation: 15s glowEffect ease-in-out infinite alternate;
+}
+.front {
+	transform: translateZ(130px);
+}
+.back {
+	transform: rotateY(180deg) translateZ(130px);
+}
+.right {
+	transform: rotateY(90deg) translateZ(130px);
+}
+.left {
+	transform: rotateY(-90deg) translateZ(130px);
+}
+.bottom {
+	transform: rotateX(-90deg) translateZ(130px);
+}
+.top {
+	transform: rotateX(90deg) translateZ(130px);
+}
+.inner_side_front {
+	width: 50%;
+	height: 50%;
+	transform: translate(-50%,-50%) translateZ(50px);
+	top: 50%;
+	left: 50%;
+}
+.inner_side_top {
+	left: 50%;
+	transform: translateX(-50%) translateZ(50px) rotateX(45deg);
+	transform-origin: bottom center;
+}
+.inner_side_bottom {
+	left: 50%;
+	bottom: 0%;
+	transform: translateX(-50%) translateZ(50px) rotateX(-45deg);
+	transform-origin: top center;
+}
+.inner_side_right,.inner_side_left {
+	background-color: rgba(255,255,255, 0.5);
+	width: 25%;
+	height: 50%;
+}
+.inner_side_left {
+	top: 50%;
+	transform: translateY(-50%) translateZ(50px) rotateY(-45deg);
+	transform-origin: right center;
+}
+.inner_side_right {
+	top: 50%;
+	right: 0%;
+	transform: translateY(-50%) translateZ(50px) rotateY(45deg);
+	transform-origin: left center;
+}
+.inner_side_top,.inner_side_bottom {
+	width: 50%;
+	height: 25%;
+}
+.front_top_right,.front_top_left {
+	width: 25%;
+	height: 25%;
+}
+.top_left1,.top_left2 {
+	left: 0%;
+	transform-origin: bottom right;
+}
+.top_left1 {
+	transform: translateZ(50px) rotateX(45deg) rotateY(-90deg);
+}
+.top_left2 {
+	transform: translateZ(50px) rotateY(-45deg) rotateX(90deg);
+}
+.top_right1,.top_right2 {
+	left: auto;
+	right: 0%;
+	transform-origin: bottom left;
+}
+.top_right1 {
+	transform: translateZ(50px) rotateY(45deg) rotateX(90deg);
+}
+.top_right2 {
+	transform: translateZ(50px) rotateX(45deg) rotateY(90deg);
+}
+.front_bottom_right,.front_bottom_left {
+	width: 25%;
+	height: 25%;
+}
+.front_bottom_left {
+	left: 0%;
+	bottom: 0%;
+	transform: translateZ(50px);
+}
+.bottom_right1,.bottom_right2 {
+	left: auto;
+	right: 0%;
+	bottom: 0%;
+	transform-origin: top left;
+}
+.bottom_right1 {
+	transform: translateZ(50px) rotateX(-45deg) rotateY(90deg);
+}
+.bottom_right2 {
+	transform: translateZ(50px) rotateX(90deg) rotateY(0deg) rotateZ(-135deg);
+}
+.bottom_left1,.bottom_left2 {
+	left: 0%;
+	bottom: 0%;
+	transform-origin: top right;
+}
+.bottom_left1 {
+	transform: translateZ(50px) rotateX(-135deg) rotateY(90deg);
+}
+.bottom_left2 {
+	transform: translateZ(50px) rotateX(90deg) rotateY(0deg) rotateZ(135deg);
+}
+@keyframes glowEffect {
+	0% {
+		box-shadow: none;
+		background-color: rgb(113,105,105, .3);
+	}
+	25% {
+		background-color: rgb(121,107,146, .5);
+		box-shadow: inset -1px 0px 20px 5px #b297e2,  -1px 0px 20px 5px #b5a8ce;
+	}
+	50% {
+		box-shadow: none;
+		background-color: rgb(113,105,105, .3);
+	}
+	75% {
+		background-color: rgb(110,133,134, .5);
+		box-shadow: inset -1px 0px 20px 5px #6dceda8c,  -1px 0px 20px 5px #8cb4b98c;
+	}
+	
+	
+}
